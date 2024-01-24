@@ -31,6 +31,9 @@ const QuestionComponent = ({ pool, currentQuestion, setRandomQuestion }) => {
             )}
         </div>
     );
+
+    // Might be HELPFUL later
+    // <button onClick={() => setRandomQuestion(getRandomQuestion())}>Get Random Question</button>
 };
 
 const mapStateToProps = (state) => ({
