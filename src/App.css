@@ -1,6 +1,8 @@
 @import './styles/bodyPanel.css';
 @import './styles/mainPanel.css';
 @import './styles/header.css';
+@import './styles/questionPanel.css';
+@import './styles/questionComponent.css';
 
 @font-face {
   font-family: "Pixel Font";

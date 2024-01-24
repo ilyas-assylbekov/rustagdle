@@ -1,0 +1,12 @@
+.questionPanel {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0px 0px 0px;
+    height: 60%;
+    width: 80%;
+    border: 5px solid black;
+    border-radius: 10px;
+    background-color: #0D0D0D;
+}
