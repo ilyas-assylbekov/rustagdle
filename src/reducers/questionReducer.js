@@ -3,6 +3,7 @@ import questionPool from "../questionPool";
 const initialState = {
     pool: questionPool, 
     currentQuestion: null,
+    lives: 3,
   };
   
   const questionReducer = (state = initialState, action) => {
@@ -11,6 +12,16 @@ const initialState = {
         return {
           ...state,
           currentQuestion: action.payload,
+        };
+      case 'DECREMENT_LIVES':
+        return {
+          ...state,
+          lives: state.lives - 1,
+        };
+      case 'RESET_LIVES':
+        return {
+          ...state,
+          lives: 3, // Reset to initial number of lives
         };
       default:
         return state;

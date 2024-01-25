@@ -1,11 +1,13 @@
 import React from 'react';
 import '../App.css';
 import QuestionComponent from './QuestionComponent';
+import LivesComponent from './LivesComponent';
 
-function QuestionPanel() {
+function QuestionPanel({answerResult}) {
   return (
     <div className='questionPanel'>
-        <QuestionComponent />
+        <QuestionComponent answerResult={answerResult} />
+        <LivesComponent />
     </div>
   );
 }

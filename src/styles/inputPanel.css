@@ -1,0 +1,32 @@
+.inputPanel {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0px 0px 0px;
+    height: 10%;
+    width: 80%;
+    border: 5px solid black;
+    border-radius: 10px;
+    background-color: #0D0D0D;
+}
+
+.inputPanel div {
+    font-size: 50px;
+    margin: 10px;
+    color: #F2F2F2;
+}
+
+.inputPanel input {
+    margin: 10px;
+    width: 60%;
+    height: 70%;
+    font-size: 30px;
+}
+
+.inputPanel button {
+    height: 70%;
+    width: 20%;
+    margin: 10px;
+    font-size: 30px;
+}

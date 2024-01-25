@@ -3,6 +3,8 @@
 @import './styles/header.css';
 @import './styles/questionPanel.css';
 @import './styles/questionComponent.css';
+@import './styles/inputPanel.css';
+@import './styles/livesComponent.css';
 
 @font-face {
   font-family: "Pixel Font";
