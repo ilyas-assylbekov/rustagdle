@@ -21,7 +21,7 @@ const initialState = {
       case 'RESET_LIVES':
         return {
           ...state,
-          lives: 3, // Reset to initial number of lives
+          lives: initialState.lives, // Reset to initial number of lives
         };
       default:
         return state;

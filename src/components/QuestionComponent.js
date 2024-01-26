@@ -1,9 +1,9 @@
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
-import { setRandomQuestion, decrementLives } from '../actions/questionAction';
+import { setRandomQuestion } from '../actions/questionAction';
 import '../App.css';
 
-const QuestionComponent = ({ pool, currentQuestion, setRandomQuestion, decrementLives }) => {
+const QuestionComponent = ({ pool, currentQuestion, setRandomQuestion, answerResult }) => {
   
   useEffect(() => {
     const getRandomQuestion = () => {

@@ -4,8 +4,9 @@ import '../App.css';
 import Header from './Header';
 import QuestionPanel from './QuestionPanel';
 import InputPanel from './InputPanel';
+import { decrementLives, resetLives } from '../actions/questionAction';
 
-function MainPanel({pool}) {
+function MainPanel({currentQuestion, decrementLives, lives, resetLives  }) {
   const [userAnswer, setUserAnswer] = useState('');
   const [answerResult, setAnswerResult] = useState('');
 
@@ -18,14 +19,16 @@ function MainPanel({pool}) {
     // Update answerResult accordingly
     // Decrement lives if the answer is wrong
 
-    // TODO: fix parts with currentQuestion here
-    const currentQuestion = pool[0]; // Assuming you're only using the first question for demonstration
-
     if (currentQuestion.correctAnswer.toLowerCase() === userAnswer.trim().toLowerCase()) {
-      setAnswerResult('Correct!');
+      setAnswerResult(true);
+      //resetLives();
     } else {
-      setAnswerResult('Wrong!');
+      setAnswerResult(false);
       // Decrement lives or handle incorrect answer logic here
+      decrementLives();
+      if ( lives === 0 ) {
+        resetLives();
+      }
     }
 
   };
@@ -40,7 +43,13 @@ function MainPanel({pool}) {
 }
 
 const mapStateToProps = (state) => ({
-  pool: state.questions.pool,
+  currentQuestion: state.questions.currentQuestion,
+  lives: state.questions.lives,
 });
 
-export default connect(mapStateToProps)(MainPanel);
+const mapDispatchToProps = {
+  decrementLives,
+  resetLives,
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(MainPanel);
