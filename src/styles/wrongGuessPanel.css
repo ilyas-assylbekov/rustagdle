@@ -1,0 +1,41 @@
+.wrongGuessOne {
+    display: flex;
+    position: absolute;
+    top: 30%;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+    width: 200px;
+    font-size: 20px;
+    border-radius: 10px;
+    color: #F2F2F2;
+    background-color: #f27e9dd7;
+}
+
+.wrongGuessTwo {
+    display: flex;
+    position: absolute;
+    top: 50%;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+    width: 200px;
+    font-size: 20px;
+    border-radius: 10px;
+    color: #F2F2F2;
+    background-color: #f27e9dd7;
+}
+
+.wrongGuessThree {
+    display: flex;
+    position: absolute;
+    top: 80%;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+    width: 200px;
+    font-size: 20px;
+    border-radius: 10px;
+    color: #F2F2F2;
+    background-color: #f27e9dd7;
+}

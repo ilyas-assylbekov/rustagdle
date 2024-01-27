@@ -5,10 +5,11 @@ import Header from './Header';
 import QuestionPanel from './QuestionPanel';
 import InputPanel from './InputPanel';
 import { decrementLives, resetLives } from '../actions/questionAction';
+import WrongGuessPanel from './WrongGuessPanel';
 
 function MainPanel({currentQuestion, decrementLives, lives, resetLives  }) {
   const [userAnswer, setUserAnswer] = useState('');
-  const [answerResult, setAnswerResult] = useState('');
+  const [answerResult, setAnswerResult] = useState([]);
 
   const handleInputChange = (value) => {
     setUserAnswer(value);
@@ -20,10 +21,12 @@ function MainPanel({currentQuestion, decrementLives, lives, resetLives  }) {
     // Decrement lives if the answer is wrong
 
     if (currentQuestion.correctAnswer.toLowerCase() === userAnswer.trim().toLowerCase()) {
-      setAnswerResult(true);
+      const value = true;
+      setAnswerResult([userAnswer, value]);
       //resetLives();
     } else {
-      setAnswerResult(false);
+      const value = false;
+      setAnswerResult([userAnswer, value]);
       // Decrement lives or handle incorrect answer logic here
       decrementLives();
       if ( lives === 0 ) {
@@ -38,6 +41,7 @@ function MainPanel({currentQuestion, decrementLives, lives, resetLives  }) {
         <Header />
         <QuestionPanel answerResult={answerResult} />
         <InputPanel onInputChange={handleInputChange} onAnswerSubmit={handleAnswerSubmit} />
+        {answerResult.length !== 0 ? (<WrongGuessPanel answerResult={answerResult} />) : (null) }
     </div>
   );
 }
