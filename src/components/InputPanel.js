@@ -1,19 +1,17 @@
 import React, { useState } from 'react';
 import '../App.css';
+import { connect } from 'react-redux';
+import { setInputValue } from '../actions/questionAction';
 
-function InputPanel( { onInputChange, onAnswerSubmit } ) {
-
-  const [inputValue, setInputValue] = useState('');
+function InputPanel( { onAnswerSubmit, inputValue, setInputValue } ) {
 
   const handleChange = (e) => {
-    const { value } = e.target;
-    setInputValue(value);
-    onInputChange(value);
+    setInputValue(e.target.value);
   };
 
   const handleSubmit = () => {
     onAnswerSubmit();
-    setInputValue(''); // Clear input after submission
+    /* setInputValue(''); // Clear input after submission */
   };
 
   return (
@@ -25,4 +23,12 @@ function InputPanel( { onInputChange, onAnswerSubmit } ) {
   );
 }
 
-export default InputPanel;
+const mapStateToProps = (state) => ({
+  inputValue: state.questions.inputValue,
+});
+
+const mapDispatchToProps = {
+  setInputValue,
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(InputPanel);

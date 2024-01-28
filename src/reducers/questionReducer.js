@@ -4,6 +4,8 @@ const initialState = {
     pool: questionPool, 
     currentQuestion: null,
     lives: 3,
+    inputValue: '',
+    userAnswers: [],
   };
   
   const questionReducer = (state = initialState, action) => {
@@ -22,6 +24,16 @@ const initialState = {
         return {
           ...state,
           lives: initialState.lives, // Reset to initial number of lives
+        };
+      case 'SET_INPUT_VALUE':
+        return {
+          ...state,
+          inputValue: action.payload,
+        };
+      case 'ADD_TO_ARRAY':
+        return {
+          ...state,
+          userAnswers: [...state.userAnswers, action.payload],
         };
       default:
         return state;

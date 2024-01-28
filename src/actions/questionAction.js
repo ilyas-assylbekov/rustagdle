@@ -10,4 +10,13 @@ export const decrementLives = () => ({
 export const resetLives = () => ({
   type: 'RESET_LIVES',
 });
-  
+
+export const setInputValue = (value) => ({
+  type: 'SET_INPUT_VALUE',
+  payload: value,
+});
+
+export const addToArray = (value) => ({
+  type: 'ADD_TO_ARRAY',
+  payload: value,
+});

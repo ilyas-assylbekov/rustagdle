@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { setRandomQuestion } from '../actions/questionAction';
 import '../App.css';
 
-const QuestionComponent = ({ pool, currentQuestion, setRandomQuestion, answerResult }) => {
+const QuestionComponent = ({ pool, currentQuestion, setRandomQuestion }) => {
   
   useEffect(() => {
     const getRandomQuestion = () => {

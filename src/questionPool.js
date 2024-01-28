@@ -2,7 +2,7 @@ const questionPool = [
     {
       id: 1,
       text: 'What is the last known bounty of William?',
-      correctAnswer: "60000000",
+      correctAnswer: "600000000",
     },
     {
       id: 2,
@@ -12,7 +12,7 @@ const questionPool = [
     {
       id: 3,
       text: 'What is the last known bounty of Duros?',
-      correctAnswer: "30000000",
+      correctAnswer: "300000000",
     },
     {
       id: 4,

@@ -4,29 +4,28 @@ import '../App.css';
 import Header from './Header';
 import QuestionPanel from './QuestionPanel';
 import InputPanel from './InputPanel';
-import { decrementLives, resetLives } from '../actions/questionAction';
-import WrongGuessPanel from './WrongGuessPanel';
+import { decrementLives, resetLives, addToArray } from '../actions/questionAction';
 
-function MainPanel({currentQuestion, decrementLives, lives, resetLives  }) {
-  const [userAnswer, setUserAnswer] = useState('');
-  const [answerResult, setAnswerResult] = useState([]);
-
-  const handleInputChange = (value) => {
-    setUserAnswer(value);
-  };
+function MainPanel({currentQuestion, decrementLives, lives, resetLives, inputValue, userAnswers , addToArray }) {
 
   const handleAnswerSubmit = () => {
-    // Logic to compare userAnswer with correct answer
+    // Logic to compare inputValue with correct answer
     // Update answerResult accordingly
     // Decrement lives if the answer is wrong
 
-    if (currentQuestion.correctAnswer.toLowerCase() === userAnswer.trim().toLowerCase()) {
-      const value = true;
-      setAnswerResult([userAnswer, value]);
+    if (currentQuestion.correctAnswer.toLowerCase() === inputValue.trim().toLowerCase()) {
+      // Logic if the inputValue is correct
+
+      const answer = [ inputValue, true ];
+      addToArray( answer );
+
       //resetLives();
     } else {
-      const value = false;
-      setAnswerResult([userAnswer, value]);
+      // Logic if the inputValue is incorrect
+
+      const answer = [ inputValue, false ];
+      addToArray( answer );
+
       // Decrement lives or handle incorrect answer logic here
       decrementLives();
       if ( lives === 0 ) {
@@ -39,9 +38,8 @@ function MainPanel({currentQuestion, decrementLives, lives, resetLives  }) {
   return (
     <div className='mainPanel'>
         <Header />
-        <QuestionPanel answerResult={answerResult} />
-        <InputPanel onInputChange={handleInputChange} onAnswerSubmit={handleAnswerSubmit} />
-        {answerResult.length !== 0 ? (<WrongGuessPanel answerResult={answerResult} />) : (null) }
+        <QuestionPanel />
+        <InputPanel onAnswerSubmit={handleAnswerSubmit} />
     </div>
   );
 }
@@ -49,11 +47,14 @@ function MainPanel({currentQuestion, decrementLives, lives, resetLives  }) {
 const mapStateToProps = (state) => ({
   currentQuestion: state.questions.currentQuestion,
   lives: state.questions.lives,
+  inputValue: state.questions.inputValue,
+  userAnswers: state.questions.userAnswers,
 });
 
 const mapDispatchToProps = {
   decrementLives,
   resetLives,
+  addToArray
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(MainPanel);

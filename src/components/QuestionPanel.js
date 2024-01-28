@@ -3,10 +3,10 @@ import '../App.css';
 import QuestionComponent from './QuestionComponent';
 import LivesComponent from './LivesComponent';
 
-function QuestionPanel({answerResult}) {
+function QuestionPanel() {
   return (
     <div className='questionPanel'>
-        <QuestionComponent answerResult={answerResult} />
+        <QuestionComponent />
         <LivesComponent />
     </div>
   );

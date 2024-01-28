@@ -5,7 +5,9 @@
 @import './styles/questionComponent.css';
 @import './styles/inputPanel.css';
 @import './styles/livesComponent.css';
-@import './styles/wrongGuessPanel.css';
+@import './styles/rightPanel.css';
+@import './styles/leftPanel.css';
+@import './styles/wrongComponent.css';
 
 @font-face {
   font-family: "Pixel Font";
