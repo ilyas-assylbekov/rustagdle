@@ -4,9 +4,9 @@ import '../App.css';
 import Header from './Header';
 import QuestionPanel from './QuestionPanel';
 import InputPanel from './InputPanel';
-import { decrementLives, resetLives, addToArray } from '../actions/questionAction';
+import { decrementLives, resetLives, addToArray, resetArray } from '../actions/questionAction';
 
-function MainPanel({currentQuestion, decrementLives, lives, resetLives, inputValue, userAnswers , addToArray }) {
+function MainPanel({currentQuestion, decrementLives, lives, resetLives, inputValue, addToArray, resetArray }) {
 
   const handleAnswerSubmit = () => {
     // Logic to compare inputValue with correct answer
@@ -30,6 +30,7 @@ function MainPanel({currentQuestion, decrementLives, lives, resetLives, inputVal
       decrementLives();
       if ( lives === 0 ) {
         resetLives();
+        resetArray();
       }
     }
 
@@ -54,7 +55,8 @@ const mapStateToProps = (state) => ({
 const mapDispatchToProps = {
   decrementLives,
   resetLives,
-  addToArray
+  addToArray,
+  resetArray,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(MainPanel);

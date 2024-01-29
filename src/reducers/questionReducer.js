@@ -35,6 +35,11 @@ const initialState = {
           ...state,
           userAnswers: [...state.userAnswers, action.payload],
         };
+      case 'RESET_ARRAY':
+        return {
+          ...state,
+          userAnswers: [],
+        };
       default:
         return state;
     }

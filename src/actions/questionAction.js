@@ -20,3 +20,7 @@ export const addToArray = (value) => ({
   type: 'ADD_TO_ARRAY',
   payload: value,
 });
+
+export const resetArray = () => ({
+  type: 'RESET_ARRAY',
+});
