@@ -6,6 +6,8 @@ const initialState = {
     lives: 3,
     inputValue: '',
     userAnswers: [],
+    correctAnswer: false,
+    currentIndex: null,
   };
   
   const questionReducer = (state = initialState, action) => {
@@ -39,6 +41,26 @@ const initialState = {
         return {
           ...state,
           userAnswers: [],
+        };
+      case 'SET_CORRECT_ANSWER':
+        return {
+          ...state,
+          correctAnswer: action.payload,
+        };
+      case 'SET_CURRENT_INDEX':
+        return {
+          ...state,
+          currentIndex: action.payload,
+        };
+      case 'GET_RAND_QUEST':
+        const randInd = Math.floor(Math.random() * state.pool.length);
+        return {
+          ...state,
+          currentQuestion: state.pool[randInd],
+          lives: initialState.lives,
+          inputValue: '',
+          correctAnswer: false,
+          currentIndex: randInd,
         };
       default:
         return state;

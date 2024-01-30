@@ -6,7 +6,7 @@
     height: 80%;
     width: 100%;
     padding: 20px;
-    border: 2px solid #333;
+    /* border: 2px solid #333; */
     border-radius: 10px;
     text-align: center;
 }
@@ -15,15 +15,15 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 20%;
+  height: 10% ;
   width: 100%;
   padding: 20px;
   border: 2px solid #333;
   border-radius: 10px;
   text-align: center;
-  font-size: 50px;
-  background-color: #0D0D0D;
-  color: #F2F2F2;
+  font-size: 30px;
+  background-color: #D9525E;
+  color: #0D0D0D;
   margin-right: 30px;
 }
 
@@ -31,15 +31,15 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 20%;
+  height: 10% ;
   width: 100%;
   padding: 20px;
   border: 2px solid #333;
   border-radius: 10px;
   text-align: center;
-  font-size: 50px;
-  background-color: #0D0D0D;
-  color: #F2F2F2;
+  font-size: 30px;
+  background-color: #D9525E;
+  color: #0D0D0D;
   margin-right: 30px;
 }
 
@@ -47,14 +47,14 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 20%;
+  height: 10% ;
   width: 100%;
   padding: 20px;
   border: 2px solid #333;
   border-radius: 10px;
   text-align: center;
-  font-size: 50px;
-  background-color: #0D0D0D;
-  color: #F2F2F2;
+  font-size: 30px;
+  background-color: #D9525E;
+  color: #0D0D0D;
   margin-right: 30px;
 }

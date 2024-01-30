@@ -18,3 +18,14 @@
     color: #F2F2F2;
     overflow-wrap: break-word;
 }
+
+.nextQuestionButton {
+    height: 10%;
+    width: 40%;
+    margin: 40px 10px 10px 10px;
+    font-size: 30px;
+    background-color: #F2E85E;
+    color: #0D0D0D;
+    border-radius: 10px;
+    font-family: 'Pixel Font';
+}

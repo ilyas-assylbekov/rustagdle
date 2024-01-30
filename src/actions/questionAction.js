@@ -24,3 +24,17 @@ export const addToArray = (value) => ({
 export const resetArray = () => ({
   type: 'RESET_ARRAY',
 });
+
+export const setCorrectAnswer = (value) => ({
+  type: 'SET_CORRECT_ANSWER',
+  payload: value,
+});
+
+export const setCurrentIndex = (value) => ({
+  type: 'SET_CURRENT_INDEX',
+  payload: value,
+});
+
+export const getRandQuest = () => ({
+  type: 'GET_RAND_QUEST',
+});

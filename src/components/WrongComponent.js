@@ -4,21 +4,23 @@ import { connect } from 'react-redux';
 
 function WrongComponent({userAnswers}) {
 
-    const renderContainers = () => {
-        return userAnswers.map(([answer, _], index) => (
-          <div key={index} className={`wrongContainer-${index}`}>
-            "{answer}" is incorrect
-          </div>
-        ));
-      };
+  const wrongAnswers = userAnswers.filter( ([_, isCorrect]) => !isCorrect );
 
-    return(
-        <div className='wrongComponent'>
-            {
-                renderContainers()
-            }
+  const renderContainers = () => {
+      return wrongAnswers.map(([answer, _], index) => (
+        <div key={index} className={`wrongContainer-${index}`}>
+          "{answer}" is incorrect
         </div>
-    );
+      ));
+    };
+
+  return(
+      <div className='wrongComponent'>
+          {
+            renderContainers()
+          }
+      </div>
+  );
 }
 
 const mapStateToProps = (state) => ({
