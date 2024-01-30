@@ -22,9 +22,10 @@
   border-radius: 10px;
   text-align: center;
   font-size: 30px;
-  background-color: #D9525E;
-  color: #0D0D0D;
+  background-color: #0D0D0D;
+  color: #F2F2F2;
   margin-right: 30px;
+  box-shadow: 3px 3px #F2E85E, -1em 0 .4em #D93636;
 }
 
 .wrongContainer-1 {
@@ -38,9 +39,10 @@
   border-radius: 10px;
   text-align: center;
   font-size: 30px;
-  background-color: #D9525E;
-  color: #0D0D0D;
+  background-color: #0D0D0D;
+  color: #F2F2F2;
   margin-right: 30px;
+  box-shadow: 3px 3px #F2E85E, -1em 0 .4em #D93636;
 }
 
 .wrongContainer-2 {
@@ -54,7 +56,8 @@
   border-radius: 10px;
   text-align: center;
   font-size: 30px;
-  background-color: #D9525E;
-  color: #0D0D0D;
+  background-color: #0D0D0D;
+  color: #F2F2F2;
   margin-right: 30px;
+  box-shadow: 3px 3px #F2E85E, -1em 0 .4em #D93636;
 }
