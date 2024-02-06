@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/rustagdle/static/css/main.f1d1f6bb.css",
+    "main.js": "/rustagdle/static/js/main.c383b87c.js",
+    "static/js/787.3dcdfcec.chunk.js": "/rustagdle/static/js/787.3dcdfcec.chunk.js",
+    "static/media/VT323-Regular.ttf": "/rustagdle/static/media/VT323-Regular.2bc43ad8eb2f60b39f27.ttf",
+    "static/media/logo.jpg": "/rustagdle/static/media/logo.2b0d6141300ccca632ed.jpg",
+    "static/media/logo.svg": "/rustagdle/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/rustagdle/index.html",
+    "main.f1d1f6bb.css.map": "/rustagdle/static/css/main.f1d1f6bb.css.map",
+    "main.c383b87c.js.map": "/rustagdle/static/js/main.c383b87c.js.map",
+    "787.3dcdfcec.chunk.js.map": "/rustagdle/static/js/787.3dcdfcec.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f1d1f6bb.css",
+    "static/js/main.c383b87c.js"
+  ]
+}
