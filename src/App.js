@@ -1,10 +1,14 @@
 import logo from './logo.svg';
 import './App.css';
 import BodyPanel from './components/BodyPanel';
+import { Provider } from 'react-redux';
+import store from './store';
 
 function App() {
   return (
-    <BodyPanel />
+    <Provider store={store}>
+          <BodyPanel />
+    </Provider>
   );
 }
 
