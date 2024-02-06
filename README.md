@@ -6,11 +6,11 @@ RUSTAGDLE is a React web application that utilizes Redux technology to develop a
 
 To use the application, follow these steps:
 
-Clone this repository to your local machine.
-Navigate to the project directory.
-Run `npm install` to install the necessary dependencies.
-Run `npm start` to start the development server.
-Open your web browser and navigate to `http://localhost:3000` to view the application.
+- Clone this repository to your local machine.
+- Navigate to the project directory.
+- Run `npm install` to install the necessary dependencies.
+- Run `npm start` to start the development server.
+- Open your web browser and navigate to `http://localhost:3000` to view the application.
 
 ## Important Note
 
