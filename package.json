@@ -5,6 +5,7 @@
   "homepage": "https://ilyas-assylbekov.github.io/rustagdle",
   "predeploy": "npm run build",
   "deploy": "gh-pages -d build",
+  "main": "index.js",
   "dependencies": {
     "@babel/plugin-transform-private-property-in-object": "^7.23.4",
     "@redux-devtools/extension": "^3.3.0",
